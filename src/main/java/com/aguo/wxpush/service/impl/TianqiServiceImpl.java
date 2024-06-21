@@ -38,8 +38,8 @@ public class TianqiServiceImpl implements TianqiService {
         try {
             OkHttpClient client = new OkHttpClient.Builder().build();
             HttpUrl url = new HttpUrl.Builder()
-                    .scheme("https")
-                    .host("www.yiketianqi.com")
+                    .scheme("http")
+                    .host("v1.yiketianqi.com")
                     .addPathSegments("free/day")
                     .addQueryParameter("appid", configConstant.getWeatherAppId())
                     .addQueryParameter("appsecret", configConstant.getWeatherAppSecret())
@@ -63,8 +63,8 @@ public class TianqiServiceImpl implements TianqiService {
         try {
             OkHttpClient client = new OkHttpClient.Builder().build();
             HttpUrl url = new HttpUrl.Builder()
-                    .scheme("https")
-                    .host("yiketianqi.com")
+                    .scheme("http")
+                    .host("v1.yiketianqi.com")
                     .addPathSegments("free/week")
                     .addQueryParameter("appid", configConstant.getWeatherAppId())
                     .addQueryParameter("appsecret", configConstant.getWeatherAppSecret())
@@ -115,10 +115,17 @@ public class TianqiServiceImpl implements TianqiService {
         return map;
     }
 
+
+    /*
+    *                     .scheme("http")
+                    .host("v1.yiketianqi.com")
+                    .addPathSegments("free/week")
+    * */
     @Override
     @Deprecated
     public JSONObject getWeatherByIP() {
-        String TemperatureUrl = "https://www.yiketianqi.com/free/day?appid=" + configConstant.getWeatherAppId() + "&appsecret=" + configConstant.getWeatherAppSecret() + "&unescape=1";
+        //String TemperatureUrl = "https://v1.yiketianqi.com/free/week?appid=" + configConstant.getWeatherAppId() + "&appsecret=" + configConstant.getWeatherAppSecret() + "&unescape=1" + "&city=" + configConstant.getCity();
+        String TemperatureUrl = "https://v1.yiketianqi.com/free/week?unescape=1&appid=84147746&appsecret=YrrCn2ZH&city=%E6%B1%9F%E6%B4%A5";
         String sendGet = HttpUtil.sendGet(TemperatureUrl, null);
         return JSONObject.parseObject(sendGet);
     }

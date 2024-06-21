@@ -1,45 +1,45 @@
 #去申请一个微信测试号 https://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=sandbox/login
 wx:
   config:
-    appId: ""
-    appSecret: ""
+    appId: "wx7adeeb13325d9272"
+    appSecret: "ef6d60b4c926d444a60ff736a0b4ea5d"
     #模板Id，这是你新增模板后的ID
-    templateId: ""
+    templateId: "jCG6JBDngEL2G_PeJp2asa9u_oZ3f3jkGsuJTWLf1w0"
     # 这是OpenId，也就是你扫码关注的微信号的id，在微信后台看
     openidList:
-      - ""
+      - "oqJpG6Z-n4uKBhObcvldnC9Ql_LE"
 #      - ""
 # 这些是配置生日、在一起时间
 message:
   config:
     #  false：关闭
     # true：开启
-    lunarSwitch: true # 农历开关 true：开启 false：关闭
-    birthday1: "11-20" # 生日日期
-    birthday2: "08-03" # 新历与农历都用数字表示。例如 08-03 表示 8月3号，也可以表示农历八月初三。
-    togetherDate: "2021-04-23" #填你们在一起的那天日期
+    lunarSwitch: false # 农历开关 true：开启 false：关闭
+    birthday1: "07-03" # 生日日期
+    birthday2: "02-02" # 新历与农历都用数字表示。例如 08-03 表示 8月3号，也可以表示农历八月初三。
+    togetherDate: "2023-05-29" #填你们在一起的那天日期
     message: "Have a happy day and love you"
 
 # 这是配置天气的，去申请 https://tianqiapi.com/user/login
 weather:
   config:
     # 这两个值来自提供天气服务的网站页面上的
-    appid: ""
-    appSecret: ""
+    appid: "84147746"
+    appSecret: "YrrCn2ZH"
     # 广州就广州，不要画蛇添足追加个“市”变成广州市
     # 天河√，天河区×  北京√，北京市×
-    city: "广州"
+    city: "江津"
 
 #注册并购买，有券，直接白嫖 https://www.apispace.com/eolink/api/myjj/introduction
 ApiSpace:
   enableDaily: true #【新增功能】  true：开启每日一句，false：则不开启
   # token来自名言警句的网站，直接复制即可
-  token: ""
+  token: "apagddw85nj45bh87fnir8gowmnnrhm2"
 
 # 9月6号有道翻译取消免费接口，因此需申请有道翻译服务 https://ai.youdao.com/product-fanyi-text.s
 youdao:
-  appKey_YouDao: "" #即 应用ID
-  appSecret_YouDao: "" # 即 应用秘钥
+  appKey_YouDao: "51db32a735069567" #即 应用ID
+  appSecret_YouDao: "YUKqpVCeol776IZqPG4g4EjLM19L6NOW" # 即 应用秘钥
 
 
 # 服务器端口号，遇到端口冲突时修改
